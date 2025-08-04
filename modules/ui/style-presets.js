@@ -19,7 +19,7 @@ const customPresetPrefix = "fmgStyle_";
 
 // add style presets to list
 {
-  const systemOptions = systemPresets.map(styleName => `<option value="${styleName}">${styleName}</option>`);
+  const systemOptions = systemPresets.map(styleName => `<option value="${styleName}">${getsystemPresetChinese(styleName)}</option>`);
   const storedStyles = Object.keys(localStorage).filter(key => key.startsWith(customPresetPrefix));
   const customOptions = storedStyles.map(
     styleName => `<option value="${styleName}">${styleName.replace(customPresetPrefix, "")} [custom]</option>`
@@ -37,6 +37,36 @@ async function applyStyleOnLoad() {
   updateMapFilter();
   stylePreset.value = stylePreset.dataset.old = appliedPreset;
   setPresetRemoveButtonVisibiliy();
+}
+
+function getsystemPresetChinese(systemPresets){
+  switch(systemPresets){
+    case 'default':
+      return '默认';
+      case 'ancient':
+      return '古老的';
+      case 'gloom':
+      return '灰暗的';
+      case 'pale':
+      return '苍白的';
+      case 'light':
+      return '明亮的';
+      case 'watercolor':
+      return '水彩的';
+      case 'clean':
+      return '干净的';
+      case 'atlas':
+      return '轮廓';
+      case 'darkSeas':
+      return '黑海';
+      case 'cyberpunk':
+      return '赛博朋克';
+      case 'night':
+      return '夜晚的';
+      case 'monochrome':
+      return '黑白的';
+  }
+    return '未知';
 }
 
 async function getStylePreset(desiredPreset) {

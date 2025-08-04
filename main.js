@@ -142,9 +142,9 @@ fogging
   .attr("filter", "url(#splotch)");
 
 // assign events separately as not a viewbox child
-scaleBar.on("mousemove", () => tip("Click to open Units Editor")).on("click", () => editUnits());
+scaleBar.on("mousemove", () => tip("单击打开单位编辑器")).on("click", () => editUnits());
 legend
-  .on("mousemove", () => tip("Drag to change the position. Click to hide the legend"))
+  .on("mousemove", () => tip("拖动以更改位置，单击以隐藏图例"))
   .on("click", () => clearLegend());
 
 // main data variables
@@ -286,7 +286,7 @@ async function checkLoadParameters() {
 
   // if there is a seed (user of MFCG provided), generate map for it
   if (params.get("seed")) {
-    WARN && console.warn("Generate map for seed");
+    WARN && console.warn("为种子生成地图");
     await generateMapOnLoad();
     return;
   }
@@ -296,7 +296,7 @@ async function checkLoadParameters() {
     try {
       const blob = await ldb.get("lastMap");
       if (blob) {
-        WARN && console.warn("Loading last stored map");
+        WARN && console.warn("正在加载上次存储的地图");
         uploadMap(blob);
         return;
       }
@@ -306,7 +306,7 @@ async function checkLoadParameters() {
   }
 
   // else generate random map
-  WARN && console.warn("Generate random map");
+  WARN && console.warn("生成随机地图");
   generateMapOnLoad();
 }
 
@@ -381,7 +381,7 @@ function toggleAssistant() {
         setTimeout(() => {
           const bubble = byId("chat-widget-minimized");
           if (bubble) {
-            bubble.dataset.tip = "Click to open the Assistant";
+            bubble.dataset.tip = "单击打开助手";
             bubble.on("mouseover", showDataTip);
           }
         }, 5000);
@@ -397,7 +397,7 @@ function findBurgForMFCG(params) {
   const cells = pack.cells,
     burgs = pack.burgs;
   if (pack.burgs.length < 2) {
-    ERROR && console.error("Cannot select a burg for MFCG");
+    ERROR && console.error("无法为MFCG选择城镇");
     return;
   }
 
@@ -425,7 +425,7 @@ function findBurgForMFCG(params) {
   const selected = d3.scan(selection, (a, b) => Math.abs(a.population - size) - Math.abs(b.population - size));
   const burgId = selection[selected].i;
   if (!burgId) {
-    ERROR && console.error("Cannot select a burg for MFCG");
+    ERROR && console.error("无法为MFCG选择城镇");
     return;
   }
 
@@ -676,7 +676,7 @@ async function generate(options) {
     const parsedError = parseError(error);
     clearMainTip();
 
-    alertMessage.innerHTML = /* html */ `An error has occurred on map generation. Please retry. <br />If error is critical, clear the stored data and try again.
+    alertMessage.innerHTML = /* html */ `生成地图时出错。请重试。<br/>如果错误严重，请清除存储的数据，然后重试.
       <p id="errorBox">${parsedError}</p>`;
     $("#alert").dialog({
       resizable: false,

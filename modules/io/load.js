@@ -739,7 +739,7 @@ async function parseLoadedData(data, mapVersion) {
     WARN && console.warn(`TOTAL: ${rn((performance.now() - uploadMap.timeStart) / 1000, 2)}s`);
     showStatistics();
     INFO && console.groupEnd("Loaded Map " + seed);
-    tip("Map is successfully loaded", true, "success", 7000);
+    tip("地图已成功加载!", true, "success", 7000);
   } catch (error) {
     ERROR && console.error(error);
     clearMainTip();
@@ -749,7 +749,7 @@ async function parseLoadedData(data, mapVersion) {
 
     $("#alert").dialog({
       resizable: false,
-      title: "Loading error",
+      title: "加载出错",
       maxWidth: "40em",
       buttons: {
         "Clear cache": () => cleanupData(),

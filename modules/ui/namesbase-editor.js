@@ -213,10 +213,10 @@ function editNamesbase() {
   }
 
   function namesbaseRestoreDefault() {
-    alertMessage.innerHTML = /* html */ `Are you sure you want to restore default namesbase?`;
+    alertMessage.innerHTML = /* html */ `你确定要恢复默认名称库吗?`;
     $("#alert").dialog({
       resizable: false,
-      title: "Restore default data",
+      title: "恢复默认数据a",
       buttons: {
         Restore: function () {
           $(this).dialog("close");
@@ -240,7 +240,7 @@ function editNamesbase() {
 
   function namesbaseUpload(dataLoaded, override = true) {
     const data = dataLoaded.split("\r\n");
-    if (!data || !data[0]) return tip("Cannot load a namesbase. Please check the data format", false, "error");
+    if (!data || !data[0]) return tip("无法加载名称库，请检查数据格式", false, "error");
 
     Names.clearChains();
     if (override) nameBases = [];
