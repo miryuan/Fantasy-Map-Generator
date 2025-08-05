@@ -36,7 +36,7 @@ function editHeightmap(options) {
 
     $("#alert").dialog({
       resizable: false,
-      title: "Edit Heightmap",
+      title: "高程编辑器",
       width: "28em",
       buttons: {
         Erase: () => enterHeightmapEditMode("erase"),

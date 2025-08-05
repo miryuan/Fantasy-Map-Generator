@@ -507,7 +507,7 @@ window.HeightmapGenerator = (function () {
 
   function getPointInRange(range, length) {
     if (typeof range !== "string") {
-      ERROR && console.error("Range should be a string");
+      ERROR && console.error("范围应为字符串");
       return;
     }
 

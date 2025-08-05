@@ -67,9 +67,9 @@ function showDataTip(event) {
 function showElementLockTip(event) {
   const locked = event?.target?.classList?.contains("icon-lock");
   if (locked) {
-    tip("Locked. Click to unlock the element and allow it to be changed by regeneration tools");
+    tip("锁定. Click to unlock the element and allow it to be changed by regeneration tools");
   } else {
-    tip("Unlocked. Click to lock the element and prevent changes to it by regeneration tools");
+    tip("解锁. Click to lock the element and prevent changes to it by regeneration tools");
   }
 }
 

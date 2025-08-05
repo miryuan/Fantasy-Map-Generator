@@ -30,7 +30,7 @@ function editMarker(markerI) {
   updateInputs();
 
   $("#markerEditor").dialog({
-    title: "Edit Marker",
+    title: "标记编辑",
     resizable: false,
     position: {my: "left top", at: "left+10 top+10", of: "svg", collision: "fit"},
     close: closeMarkerEditor

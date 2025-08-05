@@ -15,7 +15,7 @@ function createRiver() {
   const body = document.getElementById("riverCreatorBody");
 
   $("#riverCreator").dialog({
-    title: "Create River",
+    title: "创建河流",
     resizable: false,
     position: {my: "left top", at: "left+10 top+10", of: "#map"},
     close: closeRiverCreator

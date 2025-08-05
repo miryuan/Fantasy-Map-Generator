@@ -5,7 +5,7 @@ function editLake() {
   if (layerIsOn("toggleCells")) toggleCells();
 
   $("#lakeEditor").dialog({
-    title: "Edit Lake",
+    title: "湖泊编辑器",
     resizable: false,
     position: {my: "center top+20", at: "top", of: d3.event, collision: "fit"},
     close: closeLakesEditor

@@ -26,7 +26,7 @@ function editRiver(id) {
   drawCells(cells);
 
   $("#riverEditor").dialog({
-    title: "Edit River",
+    title: "编辑河流",
     resizable: false,
     position: {my: "left top", at: "left+10 top+10", of: "#map"},
     close: closeRiverEditor

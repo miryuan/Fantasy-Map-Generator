@@ -12,7 +12,7 @@ function editReliefIcon() {
   updateReliefSizeInput();
 
   $("#reliefEditor").dialog({
-    title: "Edit Relief Icons",
+    title: "编辑浮雕图标",
     resizable: false,
     width: "27em",
     position: {my: "left top", at: "left+10 top+10", of: "#map"},

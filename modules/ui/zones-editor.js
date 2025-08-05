@@ -439,7 +439,7 @@ function editZones() {
 
     $("#alert").dialog({
       resizable: false,
-      title: "Change zone population",
+      title: "更改区域人口",
       width: "24em",
       buttons: {
         Apply: function () {

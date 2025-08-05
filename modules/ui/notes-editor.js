@@ -39,7 +39,7 @@ function editNotes(id, name) {
   }
 
   $("#notesEditor").dialog({
-    title: "Notes Editor",
+    title: "笔记编辑器",
     width: svgWidth * 0.8,
     height: svgHeight * 0.75,
     position: {my: "center", at: "center", of: "svg"},

@@ -15,7 +15,7 @@ function overviewMilitary() {
   updateHeaders();
 
   $("#militaryOverview").dialog({
-    title: "Military Overview",
+    title: "军事概况",
     resizable: false,
     width: fitContent(),
     position: {my: "right top", at: "right-10 top+10", of: "svg", collision: "fit"}

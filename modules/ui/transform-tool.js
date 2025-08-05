@@ -13,7 +13,7 @@ async function openTransformTool() {
   loadPreview();
 
   $("#transformTool").dialog({
-    title: "Transform map",
+    title: "地图转换",
     resizable: false,
     position: {my: "center", at: "center", of: "svg"},
     buttons: {

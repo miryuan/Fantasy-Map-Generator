@@ -20,7 +20,7 @@ function overviewMarkers() {
   addLines();
 
   $("#markersOverview").dialog({
-    title: "Markers Overview",
+    title: "标记概述",
     resizable: false,
     width: fitContent(),
     close: close,

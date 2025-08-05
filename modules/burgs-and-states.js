@@ -35,7 +35,7 @@ window.BurgsAndStates = (() => {
       if (sorted.length < count * 10) {
         count = Math.floor(sorted.length / 10);
         if (!count) {
-          WARN && console.warn("There is no populated cells. Cannot generate states");
+          WARN && console.warn("没有人居住的牢房。无法生成状态");
           return burgs;
         } else {
           WARN && console.warn(`Not enough populated cells (${sorted.length}). Will generate only ${count} states`);

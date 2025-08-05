@@ -15,7 +15,7 @@ function editProvinces() {
   modules.editProvinces = true;
 
   $("#provincesEditor").dialog({
-    title: "Provinces Editor",
+    title: "省份编辑器",
     resizable: false,
     width: fitContent(),
     close: closeProvincesEditor,
@@ -151,18 +151,18 @@ function editProvinces() {
         data-burgs=${p.burgs.length}
       >
         <fill-box fill="${p.color}"></fill-box>
-        <input data-tip="Province name. Click to change" class="name pointer" value="${p.name}" readonly />
-        <svg data-tip="Click to show and edit province emblem" class="coaIcon pointer hide" viewBox="0 0 200 200"><use href="#provinceCOA${
+        <input data-tip="省份名称。单击以更改" class="name pointer" value="${p.name}" readonly />
+        <svg data-tip="单击以显示和编辑省徽" class="coaIcon pointer hide" viewBox="0 0 200 200"><use href="#provinceCOA${
           p.i
         }"></use></svg>
-        <input data-tip="Province form name. Click to change" class="name pointer hide" value="${
+        <input data-tip="省表格名称。单击以更改" class="name pointer hide" value="${
           p.formName
         }" readonly />
-        <span data-tip="Province capital. Click to zoom into view" class="icon-star-empty pointer hide ${
+        <span data-tip="省首府。单击以放大视图" class="icon-star-empty pointer hide ${
           p.burg ? "" : "placeholder"
         }"></span>
         <select
-          data-tip="Province capital. Click to select from burgs within the state. No capital means the province is governed from the state capital"
+          data-tip="省首府。单击以从州内的城市中选择。没有首都意味着该省由州首府管辖"
           class="cultureBase hide ${p.burgs.length ? "" : "placeholder"}"
         >
           ${p.burgs.length ? getCapitalOptions(p.burgs, p.burg) : ""}

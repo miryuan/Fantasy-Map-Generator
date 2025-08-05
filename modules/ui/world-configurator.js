@@ -2,7 +2,7 @@ function editWorld() {
   if (customization) return;
 
   $("#worldConfigurator").dialog({
-    title: "Configure World",
+    title: "世界配置",
     resizable: false,
     width: "minmax(40em, 85vw)",
     buttons: {"Update world": updateWorld},

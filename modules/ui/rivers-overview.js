@@ -13,7 +13,7 @@ function overviewRivers() {
   modules.overviewRivers = true;
 
   $("#riversOverview").dialog({
-    title: "Rivers Overview",
+    title: "河流概览",
     resizable: false,
     width: fitContent(),
     position: {my: "right top", at: "right-10 top+10", of: "svg", collision: "fit"}
