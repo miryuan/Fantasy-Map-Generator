@@ -12,7 +12,7 @@ export function open() {
   refreshStatesEditor();
 
   $("#statesEditor").dialog({
-    title: "States Editor",
+    title: "国家编辑器",
     resizable: false,
     close: closeStatesEditor,
     position: {my: "right top", at: "right-10 top+10", of: "svg", collision: "fit"}
@@ -22,14 +22,14 @@ export function open() {
 function insertEditorHtml() {
   const editorHtml = /* html */ `<div id="statesEditor" class="dialog stable">
     <div id="statesHeader" class="header" style="grid-template-columns: 11em 8em 7em 7em 6em 6em 8em 6em 7em 6em">
-      <div data-tip="Click to sort by state name" class="sortable alphabetically" data-sortby="name">State&nbsp;</div>
-      <div data-tip="Click to sort by state form name" class="sortable alphabetically" data-sortby="form">Form&nbsp;</div>
-      <div data-tip="Click to sort by capital name" class="sortable alphabetically" data-sortby="capital">Capital&nbsp;</div>
-      <div data-tip="Click to sort by state dominant culture" class="sortable alphabetically hide" data-sortby="culture">Culture&nbsp;</div>
-      <div data-tip="Click to sort by state burgs count" class="sortable hide" data-sortby="burgs">Burgs&nbsp;</div>
-      <div data-tip="Click to sort by state area" class="sortable hide icon-sort-number-down" data-sortby="area">Area&nbsp;</div>
-      <div data-tip="Click to sort by state population" class="sortable hide" data-sortby="population">Population&nbsp;</div>
-      <div data-tip="Click to sort by state type" class="sortable alphabetically hidden show hide" data-sortby="type">Type&nbsp;</div>
+      <div data-tip="Click to sort by state name" class="sortable alphabetically" data-sortby="name">国家名称&nbsp;</div>
+      <div data-tip="Click to sort by state form name" class="sortable alphabetically" data-sortby="form">从&nbsp;</div>
+      <div data-tip="Click to sort by capital name" class="sortable alphabetically" data-sortby="capital">首度&nbsp;</div>
+      <div data-tip="Click to sort by state dominant culture" class="sortable alphabetically hide" data-sortby="culture">文化&nbsp;</div>
+      <div data-tip="Click to sort by state burgs count" class="sortable hide" data-sortby="burgs">城镇数量&nbsp;</div>
+      <div data-tip="Click to sort by state area" class="sortable hide icon-sort-number-down" data-sortby="area">面积&nbsp;</div>
+      <div data-tip="Click to sort by state population" class="sortable hide" data-sortby="population">人口&nbsp;</div>
+      <div data-tip="Click to sort by state type" class="sortable alphabetically hidden show hide" data-sortby="type">类型&nbsp;</div>
       <div data-tip="Click to sort by state expansion value" class="sortable hidden show hide" data-sortby="expansionism">Expansion&nbsp;</div>
       <div data-tip="Click to sort by state cells count" class="sortable hidden show hide" data-sortby="cells">Cells&nbsp;</div>
     </div>

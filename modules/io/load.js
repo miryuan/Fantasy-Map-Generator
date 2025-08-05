@@ -464,7 +464,7 @@ async function parseLoadedData(data, mapVersion) {
     }
 
     {
-      scaleBar.on("mousemove", () => tip("Click to open Units Editor")).on("click", () => editUnits());
+      scaleBar.on("mousemove", () => tip("点击打开单位编辑器")).on("click", () => editUnits());
       legend
         .on("mousemove", () => tip("Drag to change the position. Click to hide the legend"))
         .on("click", () => clearLegend());

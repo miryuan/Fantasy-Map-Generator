@@ -7,7 +7,7 @@ function editUnits() {
   modules.editUnits = true;
 
   $("#unitsEditor").dialog({
-    title: "Units Editor",
+    title: "单位编辑器",
     position: {my: "right top", at: "right-10 top+10", of: "svg", collision: "fit"}
   });
 
@@ -170,7 +170,7 @@ function editUnits() {
       this.classList.remove("pressed");
     } else {
       if (!layerIsOn("toggleRulers")) toggleRulers();
-      tip("Draw a curve along routes to measure length. Hold Shift to measure away from roads.", true);
+      tip("沿着路线绘制曲线以测量长度。按住 Shift 键以测量远离道路的距离。", true);
       unitsBottom.querySelectorAll(".pressed").forEach(button => button.classList.remove("pressed"));
       this.classList.add("pressed");
 
@@ -207,7 +207,7 @@ function editUnits() {
             restoreDefaultEvents();
             clearMainTip();
             addRouteOpisometer.classList.remove("pressed");
-            tip("Must start in a cell with a route in it", false, "error");
+            tip("必须从路线单元格开始", false, "error");
           }
         })
       );
@@ -221,7 +221,7 @@ function editUnits() {
       this.classList.remove("pressed");
     } else {
       if (!layerIsOn("toggleRulers")) toggleRulers();
-      tip("Draw a curve to measure its area. Hold Shift to disallow path optimization", true);
+      tip("沿着曲线绘制曲线以测量面积。按住 Shift 键以测量远离道路的距离。", true);
       unitsBottom.querySelectorAll(".pressed").forEach(button => button.classList.remove("pressed"));
       this.classList.add("pressed");
       viewbox.style("cursor", "crosshair").call(
@@ -248,11 +248,11 @@ function editUnits() {
 
   function removeAllRulers() {
     if (!rulers.data.length) return;
-    alertMessage.innerHTML = /* html */ ` Are you sure you want to remove all placed rulers?
-      <br />If you just want to hide rulers, toggle the Rulers layer off in Menu`;
+    alertMessage.innerHTML = /* html */ ` 您确定要删除所有已放置的标尺吗？
+      <br />如果您只想隐藏标尺，请在菜单中关闭标尺图层`;
     $("#alert").dialog({
       resizable: false,
-      title: "Remove all rulers",
+      title: "删除所有标尺",
       buttons: {
         Remove: function () {
           $(this).dialog("close");

@@ -217,7 +217,7 @@ export function open() {
   else charts.forEach(chart => renderChart(chart));
 
   $("#chartsOverview").dialog({
-    title: "Data Charts",
+    title: "数据图表",
     position: {my: "center", at: "center", of: "svg"},
     close: handleClose
   });
@@ -283,20 +283,20 @@ function insertHtml() {
   const html = /* html */ `<div id="chartsOverview" class="dialog stable">
     <form id="chartsOverview__form">
       <div>
-        <button data-tip="Add a chart" type="submit">Plot</button>
+        <button data-tip="添加图表" type="submit">Plot</button>
 
-        <select data-tip="Select entity (y axis)" id="chartsOverview__entitiesSelect">
+        <select data-tip="选择实体 (y axis)" id="chartsOverview__entitiesSelect">
           ${createOptions(entities)}
         </select>
 
         <label>by
-          <select data-tip="Select value to plot by (x axis)" id="chartsOverview__plotBySelect">
+          <select data-tip="选择要绘制的值 (x axis)" id="chartsOverview__plotBySelect">
             ${createOptions(plotBy)}
           </select>
         </label>
 
         <label>grouped by
-          <select data-tip="Select entoty to group by. If you don't need grouping, set it the same as the entity" id="chartsOverview__groupBySelect">
+          <select data-tip="选择要分组的实体。如果不需要分组，请将其设置为与实体相同" id="chartsOverview__groupBySelect">
             ${createOptions(entities)}
           </select>
         </label>

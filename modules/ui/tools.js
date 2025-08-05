@@ -33,7 +33,7 @@ toolsContent.addEventListener("click", function (event) {
     const dontAsk = sessionStorage.getItem("regenerateFeatureDontAsk");
     if (dontAsk) return processFeatureRegeneration(event, button);
 
-    alertMessage.innerHTML = /* html */ `Regeneration will remove all the custom changes for the element.<br /><br />Are you sure you want to proceed?`;
+    alertMessage.innerHTML = /* html */ `重新生成将删除元素的所有自定义更改.<br /><br />您确定要继续吗?`;
     $("#alert").dialog({
       resizable: false,
       title: "Regenerate element",
@@ -48,7 +48,7 @@ toolsContent.addEventListener("click", function (event) {
       },
       open: function () {
         const checkbox =
-          '<span><input id="dontAsk" class="checkbox" type="checkbox"><label for="dontAsk" class="checkbox-label dontAsk"><i>do not ask again</i></label><span>';
+          '<span><input id="dontAsk" class="checkbox" type="checkbox"><label for="dontAsk" class="checkbox-label dontAsk"><i>不再询问</i></label><span>';
         const pane = this.parentElement.querySelector(".ui-dialog-buttonpane");
         pane.insertAdjacentHTML("afterbegin", checkbox);
       },

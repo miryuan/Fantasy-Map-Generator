@@ -40,7 +40,7 @@ function editNamesbase() {
   updateInputs();
 
   $("#namesbaseEditor").dialog({
-    title: "Namesbase Editor",
+    title: "名称库编辑器",
     width: "60vw",
     position: {my: "center", at: "center", of: "svg"}
   });
@@ -103,13 +103,13 @@ function editNamesbase() {
 
   function updateBaseMin() {
     const base = +document.getElementById("namesbaseSelect").value;
-    if (+this.value > nameBases[base].max) return tip("Minimal length cannot be greater than maximal", false, "error");
+    if (+this.value > nameBases[base].max) return tip("最小长度不能大于最大长度", false, "error");
     nameBases[base].min = +this.value;
   }
 
   function updateBaseMax() {
     const base = +document.getElementById("namesbaseSelect").value;
-    if (+this.value < nameBases[base].min) return tip("Maximal length should be greater than minimal", false, "error");
+    if (+this.value < nameBases[base].min) return tip("最大长度应大于最小长度", false, "error");
     nameBases[base].max = +this.value;
   }
 
@@ -122,7 +122,7 @@ function editNamesbase() {
     const namesSourceString = document.getElementById("namesbaseTextarea").value;
     const namesArray = namesSourceString.toLowerCase().split(",");
     const length = namesArray.length;
-    if (!namesSourceString || !length) return tip("Names data should not be empty", false, "error");
+    if (!namesSourceString || !length) return tip("名称数据不应为空", false, "error");
 
     const chain = Names.calculateChain(namesSourceString);
     const variety = rn(d3.mean(Object.values(chain).map(keyValue => keyValue.length)));
@@ -166,20 +166,20 @@ function editNamesbase() {
     };
 
     alertMessage.innerHTML = /* html */ `<div style="line-height: 1.6em; max-width: 20em">
-      <div data-tip="Number of names provided">Namesbase length: ${length} ${getLengthQuality()}</div>
+      <div data-tip="提供的名称数量">名称基础长度: ${length} ${getLengthQuality()}</div>
       <div data-tip="Average number of generation variants for each key in the chain">Namesbase variety: ${variety} ${getVarietyLevel()}</div>
       <hr />
-      <div data-tip="The shortest name length">Min name length: ${d3.min(wordsLength)}</div>
-      <div data-tip="The longest name length">Max name length: ${d3.max(wordsLength)}</div>
-      <div data-tip="Average name length">Mean name length: ${rn(d3.mean(wordsLength), 1)}</div>
-      <div data-tip="Common name length">Median name length: ${d3.median(wordsLength)}</div>
+      <div data-tip="最短名称长度">最短名称长度: ${d3.min(wordsLength)}</div>
+      <div data-tip="最长名称长度">最长名称长度: ${d3.max(wordsLength)}</div>
+      <div data-tip="平均名称长度">平均名称长度: ${rn(d3.mean(wordsLength), 1)}</div>
+      <div data-tip="平均名称长度">中等长度名称长度: ${d3.median(wordsLength)}</div>
       <hr />
-      <div data-tip="Characters outside of Basic Latin have bad font support">Non-basic chars: ${nonBasicLatinChars}</div>
-      <div data-tip="Characters that are frequently (more than 3 times) doubled">Doubled chars: ${doubled.join(
+      <div data-tip="非基本拉丁字符">非基本拉丁字符: ${nonBasicLatinChars}</div>
+      <div data-tip="字符频繁（超过3次）重复">重复字符: ${doubled.join(
         ""
       )}</div>
-      <div data-tip="Names used more than one time">Duplicates: ${duplicates}</div>
-      <div data-tip="Percentage of names containing space character">Multi-word names: ${rn(
+      <div data-tip="名称使用了多次">重复: ${duplicates}</div>
+      <div data-tip="包含空格字符的名称数量">多词名称: ${rn(
         multiwordRate * 100,
         2
       )}%</div>
@@ -187,7 +187,7 @@ function editNamesbase() {
 
     $("#alert").dialog({
       resizable: false,
-      title: "Data Analysis",
+      title: "数据分析",
       position: {my: "left top-30", at: "right+10 top", of: "#namesbaseEditor"},
       buttons: {
         OK: function () {
